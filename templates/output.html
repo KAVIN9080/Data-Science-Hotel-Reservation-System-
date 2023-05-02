@@ -1,1 +1,37 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Output</title>
+    <style>
+        #out_pic{
+            background-image: url('../static/pictures/H_R_2.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+        }
+        h1{
+            padding-top: 30vh;
+            padding-left: 10vh;
+            color: #0dd7f1;
+            font-size: 30px;
+        }
+        p{
+            color: aliceblue;
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div id="out_pic">
+    <center>
+        <h1>
+            <p>Booking Prediction</p>
+            {{prediction_number}}
+        </h1>
+    </center>
+</div>
+</body>
+</html>
