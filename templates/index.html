@@ -1,1 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        #pic{
+            background: url(/static/pictures/H_R_2.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            height: auto;
+            width: auto;
+        }
+        h1{
+            color: rgb(250, 246, 246);
+            padding-top: 2%;
+            padding-bottom: 0.5%;
+            font-size: 40px;
+        }
+        #frm{
+            color: rgb(244, 246, 248);
+            font-size: 20px;
+        }
+        input{
+            block-size: 20px;
+            margin-top: 0.2%;
+            margin-bottom: 0.5%;
+        }
+        select{
+            block-size: 25px;
+            margin-top: 0.2%;
+            margin-bottom: 0.5%;
+        }
+        button{
+            width: 80px;
+            height: 30px;
+            font-size: 15px;
+            color: #0f5ef0;
+            font-weight: bold;
+            margin-bottom: 2%;
+        }
+    </style>
+</head>
+<body>
+    <div id="pic">
+    <center>
+    <h1>Hotel Reservation<h1>
+    <div id="frm">
+    <form action="{{ url_for('Predict')}}" method="post">
+        No Of Adults <br><input type="number" name="no_of_adults" required><br>
 
+        No Of Children <br><input type="number" name="no_of_children" required><br>
+
+        No Of Weekend Nights <br><input type="number" name="no_of_weekend_nights" required><br>
+
+        No Of Week Nights <br><input type="number" name="no_of_week_nights" required><br>
+        
+        Type Of Meal Plan <br> 
+        <select name="type_of_meal_plan">
+            <option>Select</option>
+            <option value="0">Not Selected</option>
+            <option value="1">Meal Plan 1</option>
+            <option value="2">Meal Plan 2</option>
+            <option value="3">Meal Plan 3</option>
+        </select>
+        <br>
+        Required Car Parking Space <br><input type="number" name="required_car_parking_space" required><br>
+        
+        Room Type Reserved <br>
+        <select name="room_type_reserved">
+            <option>Select</option>
+            <option value="1">Room_Type 1</option>
+            <option value="2">Room_Type 2</option>
+            <option value="3">Room_Type 3</option>
+            <option value="4">Room_Type 4</option>
+            <option value="5">Room_Type 5</option>
+            <option value="6">Room_Type 6</option>
+            <option value="7">Room_Type 7</option>
+        </select>
+        <br>
+
+        Lead Time <br><input type="number" name="lead_time"" required><br>
+        
+        Arrival Year <br><input type="number" name="arrival_year" required><br>
+        
+        Arrival Month <br><input type="number" name="arrival_month" required><br>
+       
+        Arrival Date <br><input type="number" name="arrival_date" required><br>
+        
+        Market Segment Type <br>
+        <select name="market_segment_type">
+            <option>Select</option>
+            <option value="1">Offline</option>
+            <option value="2">Online</option>
+            <option value="3">Corporate</option>
+            <option value="4">Aviation</option>
+            <option value="5">Complementary</option>
+        </select>
+        <br>
+        
+        Repeated Guest <br><input type="number" name="repeated_guest" required><br>
+        
+        No Of Previous Cancellations <br><input type="number" name="no_of_previous_cancellations" required><br>
+       
+        No Of Previous Bookings Not Canceled <br><input type="number" name="no_of_previous_bookings_not_canceled" required><br>
+       
+        Average Price Per Room <br><input type="number" name="avg_price_per_room" required><br>
+        
+        No Of Special Requests <br><input type="number" name="no_of_special_requests" required><br><br>
+
+        <button type="submit">Predict</button>
+    </form>
+    </div>
+</center>
+</div>
+</body>
+</html>
