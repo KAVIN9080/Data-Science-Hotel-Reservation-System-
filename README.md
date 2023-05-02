@@ -1,4 +1,4 @@
-# Data-Science-Hotel-Reservation-System-
+# Data Science (Hotel Reservation System)
 
 ## Title: 
 Predict whether the customer will keep the reservation or not
